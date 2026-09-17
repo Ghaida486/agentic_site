@@ -1,0 +1,19 @@
+# Local dependency links and package directories
+node_modules/
+
+# Generated build and validation workspaces
+.deck_build/
+.deck_preview/
+.docx_preview/
+.codex-finalizer/
+.chart-data-*/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Local editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
