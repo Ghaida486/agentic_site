@@ -1,0 +1,40 @@
+# VenueFit Boston Five Minute Recording Script
+
+Use the six updated slides and switch to the website for the live demonstration. About 665 spoken words; rehearse at roughly 140 words per minute and use the remaining time for clicks and short pauses. Timings are targets, not an automatic recording duration.
+
+## Slide 1 · 0:00–0:30 · VenueFit Boston
+
+On screen: Show slide 1.
+
+Hello, we’re presenting VenueFit Boston, a public-data tool for event teams choosing an initial venue shortlist. We designed it for university organizers, nonprofit producers, and local promoters. Venue details are spread across different websites, which makes comparison difficult. Our site brings a selected set together and lets organizers explore which recorded options might fit their event. The purpose is to support the next planning conversation with a venue.
+
+## Slide 2 · 0:30–1:00 · The decision problem
+
+On screen: Show slide 2, then briefly show the website homepage.
+
+Our main question is: which venues in this dataset can accommodate the audience in an appropriate setting and season? The site lets users adjust attendance, select indoor or outdoor space, choose a season, and restrict the comparison to venues with a documented seated capacity. It also offers an optional filter using recorded transit-distance estimates. We kept those estimates separate from the ordering because the supplied data does not include enough information to verify them.
+
+## Slide 3 · 1:00–1:45 · The comparison dataset
+
+On screen: Show slide 3. Point to the capacity chart, then briefly show the downloadable CSV.
+
+The dataset contains eight Boston venues, with recorded capacities ranging from 1,019 to 7,500 people. Seven venues are indoor, and one is outdoor and seasonal. Each row includes source links, a source-access date, and notes about the capacity. The source dates recorded in the file are September seventeenth, twenty twenty-six. These figures describe different configurations. For example, a reception capacity cannot automatically be treated as seated capacity. Three rows explicitly describe seated venues. We preserve the original CSV and use its values throughout the website. This is a selected sample, so it cannot tell us which venue is best across the entire city.
+
+## Slide 4 · 1:45–3:15 · Live planner demonstration
+
+On screen: Show slide 4, then switch to the website. Start at 2,500 people, Indoor, Not decided, No limit, Any arrangement. Select Documented seated capacity only. Then select Any arrangement, Outdoor, Summer, and Winter. Finally select Indoor, Not decided, and move the attendance slider to its minimum of 25. Pause after each change.
+
+Let’s demonstrate the planner with an indoor event for 2,500 attendees. Every candidate must have a recorded capacity at least as large as the audience. House of Blues, with a recorded capacity of 2,200, is excluded from this brief. Candidates are ordered by the smallest sufficient capacity. The displayed numbers indicate order, rather than a venue-quality score. Now I choose Documented seated capacity only under Event seating. Wang Theatre remains because its dataset row records a seated capacity of 3,500. Other venues may offer seated layouts, but those capacities are not established in this file. Next, I switch back to Any arrangement and choose an outdoor event in summer. Leader Bank Pavilion appears. When I change the season to winter, there is no candidate because the dataset describes that venue as summer-only. Finally, I reduce attendance to twenty-five. The site warns that the recorded venues are much larger than this audience. A low attendance setting does not mean the dataset contains a suitable small room. These examples show both what the filters can find and where the sample runs out of useful coverage.
+
+## Slide 5 · 3:15–4:05 · Findings and recommendations
+
+On screen: Show slide 5, then show the website’s evidence section and select one scatterplot point.
+
+The site provides a capacity chart, a scatterplot, and a table of recorded values. Selecting a scatterplot point reveals its venue, capacity, and estimated distance. The chart labels make clear that those distances remain unverified. Our first recommendation is to investigate Wang Theatre for a 2,500-person seated event, while confirming the actual layout and availability. For about 1,000 seated attendees, Jordan Hall’s recorded capacity of 1,019 makes it a candidate. At 1,500 attendees, Shubert Theatre meets the recorded threshold, while Jordan Hall does not. For an outdoor summer event of up to 5,000 people, the Pavilion is another candidate, subject to confirming its configuration and weather arrangements.
+
+## Slide 6 · 4:05–5:00 · Limitations and deliverables
+
+On screen: Show slide 6, then open Deliverables on the website. End on the deliverables page.
+
+The project’s main contribution is making the supplied evidence easier to inspect and compare. It cannot establish current availability, rental cost, accessibility, audience demand, or satisfaction. Capacities depend on event configuration, and the dataset does not provide the coordinates or calculations behind its transit estimates. We therefore label those estimates clearly and do not use them to rank venues. The revenue indicator is also only an illustration: attendance multiplied by fifty dollars, before any costs and without a ticket-sales forecast. Our deliverables page links the original dataset, the updated one-page methodology, these presentation slides, and our reflection. We will add this recording once it is uploaded. Before booking, an organizer should confirm the event layout, available dates, travel arrangements, and a quote directly with the venue. VenueFit helps identify the questions and candidates for that next step.
+

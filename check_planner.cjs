@@ -1,0 +1,15 @@
+const fs=require('fs'),vm=require('vm'),assert=require('assert');
+const ctx={window:{},document:{querySelector:()=>null}};vm.createContext(ctx);vm.runInContext(fs.readFileSync('data/venues-data.js','utf8'),ctx);const source=fs.readFileSync('app.js','utf8');vm.runInContext(source.split('function draw()')[0],ctx);
+const check=expr=>vm.runInContext(expr,ctx);
+assert.equal(check("candidates(2500,'Indoor','Any','Any',99999).length"),4);
+assert(check("candidates(2500,'Indoor','Any','Any',99999).every(v=>v.capacity>=2500)"));
+assert.equal(check("candidates(2500,'Indoor','Any','Seated',99999)[0].venue"),'Boch Center Wang Theatre');
+assert.equal(check("candidates(2500,'Indoor','Any','Seated',99999).length"),1);
+for(const season of ['Spring','Autumn','Winter'])assert.equal(check(`candidates(2500,'Outdoor','${season}','Any',99999).length`),0);
+assert.equal(check("candidates(2500,'Outdoor','Summer','Any',99999).length"),1);
+assert.equal(check("candidates(2500,'Outdoor','Summer','Any',600).length"),0);
+assert.equal(check("candidates(2500,'Outdoor','Summer','Any',1000).length"),1);
+assert(check("candidates(25,'Any','Any','Any',99999).every(v=>v.capacity>50)"));
+assert.equal(check("candidates(1500,'Any','Any','Seated',99999)[0].venue"),'Boch Center Shubert Theatre');
+assert.equal(check("candidates(7000,'Any','Any','Any',99999).length"),1);
+console.log('Passed capacity, seated, four-season, distance, small-event and upper-limit scenarios.');
